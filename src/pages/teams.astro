@@ -84,7 +84,7 @@ import TeamSection from "../components/TeamSection.astro";
 
         <!-- Team Section 1 - Office Bearer -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for this section -->
             <div class="stars-container">
@@ -165,14 +165,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="office bearer" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask1">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad1)" mask="url(#waveMask1)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="rgb(15, 5, 20)"/>
+        </svg>
 
         <!-- Team Section 2 - Tech Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for this section -->
             <div class="stars-container">
@@ -251,14 +265,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Tech team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask2">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad2)" mask="url(#waveMask2)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="#0f0a14"/>
+        </svg>
 
         <!-- Team Section 3 - Content Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for this section -->
             <div class="stars-container">
@@ -339,14 +367,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Content team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad3" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask3">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad3)" mask="url(#waveMask3)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="rgb(15, 5, 20)"/>
+        </svg>
 
         <!-- Team Section 4 - Design Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for Design Team -->
             <div class="stars-container">
@@ -427,14 +469,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Design Team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad4" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask4">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad4)" mask="url(#waveMask4)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="#0f0a14"/>
+        </svg>
 
         <!-- Team Section 5 - Pr and Outreach Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for this section -->
             <div class="stars-container">
@@ -510,14 +566,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Pr and Outreach Team " />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad5" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask5">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad5)" mask="url(#waveMask5)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="rgb(15, 5, 20)"/>
+        </svg>
 
         <!-- Team Section 6 - Management Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for Design Team -->
             <div class="stars-container">
@@ -598,14 +668,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Management Team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad6" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask6">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad6)" mask="url(#waveMask6)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="#0f0a14"/>
+        </svg>
 
         <!-- Team Section 7 - Multimedia Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, #0f0a14 0%, #1a1027 50%, #0f0a14 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for this section -->
             <div class="stars-container">
@@ -686,14 +770,28 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Multimedia Team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad7" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask7">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad7)" mask="url(#waveMask7)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="rgb(15, 5, 20)"/>
+        </svg>
 
         <!-- Team Section 9 - Research Team -->
         <section
-            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;"
+            style="min-height: auto; background: linear-gradient(180deg, rgb(15, 5, 20) 0%, rgb(20, 8, 30) 50%, rgb(15, 5, 20) 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;"
         >
             <!-- Stars for this section -->
             <div class="stars-container">
@@ -772,13 +870,27 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="Social Media Team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
 
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad8" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask8">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad8)" mask="url(#waveMask8)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="#0a0a0f"/>
+        </svg>
+
         <!-- Team Section 9 - Research Team -->
-        <section style="min-height: auto; background: linear-gradient(180deg, #0a0a0f 0%, #0d0d14 50%, #0a0a0f 100%); padding: 25px 20px 35px; color: white; position: relative; overflow: hidden;">
+        <section style="min-height: auto; background: linear-gradient(180deg, #0a0a0f 0%, #0d0d14 50%, #0a0a0f 100%); padding: 25px 20px 140px; color: white; position: relative; overflow: hidden;">
             <!-- Stars for Design Team -->
             <div class="stars-container">
                 <div
@@ -847,10 +959,25 @@ import TeamSection from "../components/TeamSection.astro";
                 <TeamSection teamName="research team" />
             </div>
 
-            <!-- Bottom gradient overlay -->
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 300px; background: linear-gradient(0deg, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.3) 30%, transparent 100%); pointer-events: none; z-index: 1;"></div>
-
         </section>
+
+        <!-- Curvy wave divider with gradient -->
+        <svg style="position: relative; width: 100%; height: 240px; display: block; margin-top: -240px; z-index: 50;" viewBox="0 0 1200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGrad9" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.9" />
+                    <stop offset="30%" stop-color="#6A1B9A" stop-opacity="0.5" />
+                    <stop offset="70%" stop-color="#4A148C" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#311B92" stop-opacity="0" />
+                </linearGradient>
+                <mask id="waveMask9">
+                    <path d="M0,180 Q300,220 600,180 T1200,180 L1200,0 L0,0 Z" fill="white"/>
+                </mask>
+            </defs>
+            <rect x="0" y="0" width="1200" height="240" fill="url(#waveGrad9)" mask="url(#waveMask9)"/>
+            <path d="M0,180 Q300,220 600,180 T1200,180 L1200,240 L0,240 Z" fill="#0a0a0f"/>
+        </svg>
+
     </main>
 
     <style>

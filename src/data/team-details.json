@@ -19,14 +19,14 @@
           "image": "\\team\\office-bearer\\Satvik.png"
         },
          {
-          "name": "Rishabh Verma",
+          "name": "Ayush Anand",
           "role": "General secretary",
-          "image": "/team/office-bearer/Rishabh_Verma.png"
+          "image": "\\team\\office-bearer\\Ayush.png"
         },
          {
           "name": "Rishabh Verma",
           "role": "Web Master",
-          "image": "/team/office-bearer/Rishabh_Verma.png"
+          "image": "\\team\\office-bearer\\Rishabh_Verma.png"
         }
         
       ]
@@ -123,9 +123,9 @@
     },{
       "name": "Pr and Outreach Team ",
       "lead": {
-        "name": "-",
+        "name": "Shreyasi Doshi",
         "role": "Team Lead",
-        "image": ""
+        "image": "\\team\\PRandOutreach\\Shreyasi Doshi.png"
       },
       "colead": {
         "name": "Arpita_Arora",
@@ -226,9 +226,9 @@
     },{
       "name": "Multimedia team",
       "lead": {
-        "name": "-",
+        "name": "Athrav",
         "role": "Team Lead",
-        "image": ""
+        "image": "\\team\\Media\\athrav.png"
       },
       "colead": {
         "name": "Sanskriti Chaudhary",
