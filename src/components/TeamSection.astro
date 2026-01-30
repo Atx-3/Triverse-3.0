@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import teamData from '../data/team-details.json';
-import galaxyImage from '../images/galaxy.png';
 
 interface Props {
   teamName: string;
@@ -47,32 +46,32 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
       class="lead-row left"
       style={hasCoLead ? '' : 'margin-bottom: 2rem;'}
     >
-      <div class="avatar-wrap lead-avatar" style={`background-image: url(${galaxyImage.src})`}>
+        <div class="avatar-wrap lead-avatar">
         {leadImage ? (
             <Image src={leadImage} alt={team.lead.name} class="team-img" />
         ) : (
             <div class="placeholder-img"></div>
         )}
-      </div>
-      <div class="info">
-        <h3>{team.lead.name}</h3>
-        <p>{team.lead.role}</p>
+        <div class="info">
+          <h3>{team.lead.name}</h3>
+          <p>{team.lead.role}</p>
+        </div>
       </div>
     </div>
 
     <!-- CO-LEAD -->
     {hasCoLead && (
       <div class="lead-row right">
-        <div class="info">
-          <h3>{team.colead?.name}</h3>
-          <p>{team.colead?.role}</p>
-        </div>
-        <div class="avatar-wrap lead-avatar" style={`background-image: url(${galaxyImage.src})`}>
+        <div class="avatar-wrap lead-avatar">
          {coleadImage ? (
             <Image src={coleadImage} alt={team.colead?.name ?? ''} class="team-img" />
         ) : (
             <div class="placeholder-img"></div>
         )}
+        <div class="info">
+          <h3>{team.colead?.name}</h3>
+          <p>{team.colead?.role}</p>
+        </div>
         </div>
       </div>
     )}
@@ -84,15 +83,17 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
            const memberImage = resolveImage(member.image);
            return (
           <div class="member-card">
-            <div class="avatar-wrap member-avatar" style={`background-image: url(${galaxyImage.src})`}>
+            <div class="avatar-wrap member-avatar">
               {memberImage ? (
                 <Image src={memberImage} alt={member.name} class="team-img" />
               ) : (
                 <div class="placeholder-img"></div>
               )}
+              <div class="info">
+                <h4>{member.name}</h4>
+                <p>{member.role}</p>
+              </div>
             </div>
-            <h4>{member.name}</h4>
-            <p>{member.role}</p>
           </div>
         )})}
       </div>
@@ -112,45 +113,57 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
 /* ---------- AVATAR WITH GALAXY BACKGROUND ---------- */
 .avatar-wrap {
   position: relative;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+  width: 280px;
+  height: 320px;
   overflow: hidden;
-
-  overflow: hidden;
-
-  /* background-image set via inline style */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border: 3px solid white;
-
+  background: linear-gradient(180deg, rgba(10, 5, 20, 0.95) 0%, rgba(60, 20, 100, 0.85) 40%, rgba(100, 40, 160, 0.9) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(100, 50, 200, 0.3);
 }
 
-/* ---------- STICKER IMAGE ---------- */
+.avatar-wrap .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 15px 15px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 2;
+  text-align: center;
+}
+
+.avatar-wrap .info h3,
+.avatar-wrap .info h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.avatar-wrap .info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ---------- SIMPLE IMAGE ---------- */
 .team-img {
-  width: 98%;
-  height: 105%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 1;
   background: transparent;
-
-  filter:
-    drop-shadow(2px 0 0 white)
-    drop-shadow(-2px 0 0 white)
-    drop-shadow(0 2px 0 white)
-    drop-shadow(0 -2px 0 white);
-
-  transform: scale(1.03);
+  transform: none;
   transition: transform 0.3s ease;
+  border-radius: 6px;
 }
 
-.team-img:hover {
-  transform: scale(1.06);
+.avatar-wrap:hover .team-img {
+  transform: scale(1.02);
 }
 
 /* ---------- LEAD / CO-LEAD ---------- */
@@ -168,16 +181,6 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
 .lead-row.right {
   justify-content: flex-end;
   margin-bottom: 2rem;
-}
-
-.lead-row h3 {
-  font-size: 1.85rem;
-  margin-bottom: 0.4rem;
-}
-
-.lead-row p {
-  font-size: 1.1rem;
-  color: #bbb;
 }
 
 /* ---------- MEMBERS GRID ---------- */
@@ -204,17 +207,6 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
 
 .member-avatar {
   margin-bottom: 0.45rem;
-}
-
-.member-card h4 {
-  font-size: 0.95rem;
-  margin: 0.1rem 0 0;
-}
-
-.member-card p {
-  font-size: 0.85rem;
-  margin-top: 0.2rem;
-  color: #aaa;
 }
 
 /* ---------- RESPONSIVE ---------- */
