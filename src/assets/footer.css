@@ -33,7 +33,7 @@ body {
   position: absolute;
   inset: 0;
 
-  background-image: url("../images/arc.png");
+  background-image: url("../images/arc.png?url");
   background-size: cover;
   background-repeat: no-repeat;
 
