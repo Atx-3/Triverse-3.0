@@ -4,6 +4,7 @@ import "../assets/footer.css";
 import { Image } from "astro:assets";
 import clubLogo from "../images/club.png";
 import triverseLogo from "../images/logo.png";
+import arcBg from "../images/arc.png";
 
 const isEventsPage = Astro.url.pathname === "/events";
 const footerClass = `footer${isEventsPage ? " footer-animate" : ""}`;
@@ -15,7 +16,12 @@ import lakshyaImg from "../images/team/tech/Lakshya.png";
 import shrutiImg from "../images/team/tech/shruti.png";
 ---
 
-<footer class={footerClass} id="footer">
+<footer
+  class={footerClass}
+  id="footer"
+  style={`--arc-bg: url(${arcBg.src});`}
+>
+
   <div class="footer-bg-pattern"></div>
 
   <!-- Subtle large logo watermark in the background -->

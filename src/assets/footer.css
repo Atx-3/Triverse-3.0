@@ -33,18 +33,18 @@ body {
   position: absolute;
   inset: 0;
 
-  background-image: url("../images/arc.png?url");
+  background-image: var(--arc-bg);
   background-size: cover;
+  background-position: center 90%;
   background-repeat: no-repeat;
 
-  background-position: center 95%;
   transform: scaleY(-1);
-
-  opacity: 0.8;
-  filter: blur(10px);
+  transform-origin: center;
+  filter: blur(15px);
+  opacity: 0.9;
+  pointer-events: none;
   z-index: 0;
 }
-
 
 /* Background Pattern */
 .footer-bg-pattern {
