@@ -23,7 +23,7 @@ const hasCoLead = Boolean(team?.colead);
 const isOfficeBearerTeam = team?.name.toLowerCase() === 'office bearer';
 
 // Load all team images eagerly
-const teamImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/team/**/*.{png,jpg,jpeg,webp}', { eager: true });
+const teamImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/team/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', { eager: true });
 
 function resolveImage(path: string | undefined | null) {
   if (!path) return null;
@@ -58,6 +58,10 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
             <h3>{team.lead.name}</h3>
             <p>{team.lead.role}</p>
           </div>
+          <div class="info info-hover">
+            <h3>{team.lead.name}</h3>
+            <p>{team.lead.role}</p>
+          </div>
         </div>
       </div>
 
@@ -71,6 +75,10 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
               <div class="placeholder-img"></div>
             )}
             <div class="info">
+              <h3>{team.colead?.name}</h3>
+              <p>{team.colead?.role}</p>
+            </div>
+            <div class="info info-hover">
               <h3>{team.colead?.name}</h3>
               <p>{team.colead?.role}</p>
             </div>
@@ -90,6 +98,10 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
                 <div class="placeholder-img"></div>
               )}
               <div class="info">
+                <h4>{member.name}</h4>
+                <p>{member.role}</p>
+              </div>
+              <div class="info info-hover">
                 <h4>{member.name}</h4>
                 <p>{member.role}</p>
               </div>
@@ -165,6 +177,27 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
 
 .avatar-wrap:hover .team-img {
   transform: scale(1.02);
+}
+
+.avatar-wrap:hover .info:not(.info-hover) {
+  opacity: 0;
+}
+
+.avatar-wrap .info-hover {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.avatar-wrap:hover .info-hover {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---------- MEMBERS GRID ---------- */
