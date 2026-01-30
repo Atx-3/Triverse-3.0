@@ -313,12 +313,26 @@ const coleadImage = hasCoLead ? resolveImage(team?.colead?.image) : null;
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 941px) {
   .members-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .avatar-wrap {
     width: 150px;
     height: 150px;
+  }
+
+  .members-grid.office-bearer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .members-grid.office-bearer-layout > .member-card,
+  .members-grid.office-bearer-layout > .member-card:nth-child(1),
+  .members-grid.office-bearer-layout > .member-card:nth-child(2),
+  .members-grid.office-bearer-layout > .member-card:nth-child(3),
+  .members-grid.office-bearer-layout > .member-card:nth-child(4),
+  .members-grid.office-bearer-layout > .member-card:nth-child(5) {
+    grid-column: 1 / -1;
+    grid-row: auto;
   }
 }
 </style>
