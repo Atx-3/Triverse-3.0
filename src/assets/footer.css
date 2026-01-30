@@ -28,6 +28,22 @@ body {
   right: 0;
 }
 
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../images/arc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: center 95%;
+  transform: scaleY(-1);
+
+  opacity: 0.8;
+  filter: blur(10px);
+  z-index: 0;
+}
 
 
 /* Background Pattern */
@@ -317,11 +333,10 @@ body {
 }
 
 .team-avatar {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(186, 85, 211, 0.3));
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
